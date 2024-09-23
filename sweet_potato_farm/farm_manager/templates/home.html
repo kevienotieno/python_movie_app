@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'static/styles.css' %}">
+    <title>Home - Sweet Potato Farming</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sweet Potato Farming in Migori</h1>
+        <div class="chart">
+            <h2>Harvest Visualization</h2>
+            <img src="data:image/png;base64,{{ data }}" alt="Harvest Chart">
+        </div>
+        <nav>
+            <a href="{% url 'harvest_list' %}">View Harvest List</a> |
+            <a href="{% url 'add_harvest' %}">Add Harvest</a>
+        </nav>
+    </div>
+</body>
+</html>

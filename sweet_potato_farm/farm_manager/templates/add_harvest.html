@@ -1,0 +1,7 @@
+<h1>Add Harvest</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add</button>
+</form>
+<a href="{% url 'harvest_list' %}">Back to Harvest List</a>
